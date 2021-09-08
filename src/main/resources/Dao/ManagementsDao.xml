@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Dao.ManagementsDao">
+    <resultMap type="domain.Managements" id="ManagementMap">
+        <id column="M_id" property="id"/>
+        <result column="passwd" property="pwd"/>
+        <result column="M_name" property="name"/>
+
+    </resultMap>
+
+    <!--配置查询所有-->
+    <select id="find" resultMap="ManagementMap">
+        select * from managements where M_id= #{id} AND passwd = #{pwd}
+    </select>
+
+
+
+</mapper>
+        <!--映射文件-->

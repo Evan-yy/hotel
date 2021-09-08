@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Dao.RoomDao">
+    <resultMap type="domain.Room" id="RoomMap">
+        <id column="room_id" property="roomid"/>
+        <result column="room_type" property="roomtype"/>
+        <result column="room_state" property="roomstate"/>
+        <result column="room_guestname" property="roomguestname"/>
+        <result column="room_guestid" property="roomguestid"/>
+        <result column="room_price" property="roomprice" />
+        <result column="room_day" property="guestday" />
+
+
+    </resultMap>
+
+    <!--配置查询所有-->
+    <select id="find" resultMap="RoomMap">
+        select * from room_1,room_2 where room_1.room_id= #{roomid} AND room_1.room_id=room_2.room_ID;
+    </select>
+
+    <select id="find2" resultMap="RoomMap">
+        select * from room_1 where room_id= #{roomid};
+    </select>
+
+    <select id="find3" resultMap="RoomMap">
+        select * from room_2 where room_ID= #{roomid};
+    </select>
+
+    <select id="findAll" resultMap="RoomMap">
+        select * from room_1;
+    </select>
+
+    <insert id="SaveRoom" parameterType="domain.Room">
+        insert into room_2 (room_ID,room_guestname,room_guestid,room_day)values(#{roomid}, #{roomguestname}, #{roomguestid},#{guestday});
+    </insert>
+
+    <update id="updateRoom" parameterType="domain.Room">
+        update room_1 set room_state=#{roomstate} where room_id=#{roomid};
+    </update>
+
+    <update id="updateRoom2" parameterType="domain.Room">
+        update room_2 set room_day=#{guestday} where room_id=#{roomid};
+    </update>
+
+    <delete id="deleteRoom2" parameterType="domain.Room">
+        delete from room_2 where room_ID=#{roomid};
+    </delete>
+
+
+</mapper>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--Mybatis主配置文件-->
+<configuration>
+    <!--配置环境-->
+    <environments default="mysql">
+        <!--配置mysql环境-->
+        <environment id="mysql">
+            <!--配置事务类型-->
+            <transactionManager type="JDBC"></transactionManager>
+            <!--配置数据源（连接池）-->
+            <dataSource type="POOLED">
+                <!--配置连接数据库的4个基本信息-->
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/hotel?useUnicode=true&amp;characterEncoding=UTF-8"/>
+                <property name="username" value="root"/>
+                <property name="password" value="yiyue99"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--指定映射配置文件的位置，映射配置文件指的是每个dao独立配置文件-->
+    <!--或者使用注解-->
+    <mappers>
+        <mapper resource="Dao/IEployeesDao.xml"/>
+        <!--注解： class="com/itheima/Dao/IUserDao.xml"-->
+        <mapper resource="Dao/ManagementsDao.xml"/>
+        <mapper resource="Dao/RoomDao.xml"/>
+        <mapper resource="Dao/ListsDao.xml"/>
+        <mapper resource="Dao/CustomersDao.xml"/>
+    </mappers>
+
+</configuration>

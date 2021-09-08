@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Dao.CustomersDao">
+    <resultMap type="domain.Customers" id="CustomersMap">
+        <id column="C_id" property="cid"/>
+        <result column="C_name" property="cname"/>
+        <result column="C_CardID" property="Ccardid"/>
+        <result column="C_phone" property="Cphone"/>
+        <result column="C_grade" property="Cgrade"/>
+    </resultMap>
+
+    <!--配置查询所有-->
+    <select id="findAll" resultMap="CustomersMap">
+        select * from customers;
+    </select>
+
+
+
+</mapper>
+        <!--映射文件-->

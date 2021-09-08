@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="hotel:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/hotel_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="hotel/web/Web" />
+      <element id="directory" name="WEB-INF" />
+      <element id="dir-copy" path="$PROJECT_DIR$/out/artifacts/hotel_war_exploded/WEB-INF/lib" />
+      <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.6" />
+      <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.4.5" />
+    </root>
+  </artifact>
+</component>

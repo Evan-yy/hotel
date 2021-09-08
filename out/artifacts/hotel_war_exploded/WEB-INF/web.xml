@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <display-name>hotel</display-name>
+    <servlet>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <servlet-class>com.EmployeeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <url-pattern>/EmployeeServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InitServlet</servlet-name>
+        <servlet-class>com.InitServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InitServlet</servlet-name>
+        <url-pattern>/InitServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ManagementServlet</servlet-name>
+        <servlet-class>com.ManagementServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagementServlet</servlet-name>
+        <url-pattern>/ManagementServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TryServlet</servlet-name>
+        <servlet-class>com.TryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TryServlet</servlet-name>
+        <url-pattern>/TryServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetRoomServlet</servlet-name>
+        <servlet-class>com.GetRoomServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetRoomServlet</servlet-name>
+        <url-pattern>/GetRoomServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ListServlet</servlet-name>
+        <servlet-class>com.ListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListServlet</servlet-name>
+        <url-pattern>/ListServlet</url-pattern>
+    </servlet-mapping>
+
+
+
+</web-app>
